@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Serviço de motoboy rápido e seguro em toda a Baixada Santista e Grande São Paulo. Solicite agora mesmo!">
+    <meta name="keywords"
+        content="motoboy, entrega rápida, serviço de motoboy, entregas expressas, Baixada Santista, Grande São Paulo">
+    <meta name="author" content="WM Express">
+    <title>Motoboy Rápido e Seguro | WM Express</title>
+    <link rel="icon" href="assets/img/logofooter.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-800 scroll-smooth">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-gray-100">
+        <div class="container mx-auto flex justify-between items-center py-6 px-8">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="assets/img/logo.png" alt="Logo" class="h-16">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="space-x-6 hidden md:flex">
+                <a href="#servicos" class="text-gray-800 hover:text-green-600 transition nav-link">Serviços</a>
+                <a href="#precos" class="text-gray-800 hover:text-green-600 transition nav-link">Preços</a>
+                <a href="#galeria" class="text-gray-800 hover:text-green-600 transition nav-link">Galeria</a>
+                <a href="#contato" class="text-gray-800 hover:text-green-600 transition nav-link">Contato</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="hamburger" class="text-3xl text-gray-700 focus:outline-none">
+                    &#9776;
+                </button>
+            </div>
+
+            <!-- Call to Action Button -->
+            <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
+                class="bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-green-700 transition hidden md:block">
+                Solicite Agora
+            </a>
+        </div>
+        <!-- Mobile Menu (oculto inicialmente) -->
+        <div id="mobile-menu" class="hidden md:hidden p-4 space-y-4 absolute inset-0 bg-white z-50 shadow-lg">
+            <div class="flex justify-between items-center mb-4">
+                <img src="assets/img/logo.png" alt="Logo" class="h-12">
+                <button id="close-menu" class="text-3xl text-black">
+                    &#10005; <!-- Botão de fechar -->
+                </button>
+            </div>
+            <!-- Área dos Links do Menu -->
+            <div class="space-y-2 bg-gray-200 p-4 rounded-md text-gray-800">
+                <a href="#servicos"
+                    class="block hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Serviços</a>
+                <a href="#precos"
+                    class="block  hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Preços</a>
+                <a href="#galeria"
+                    class="block  hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Galeria</a>
+                <a href="#contato"
+                    class="block  hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Contato</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Hero -->
+    <section
+        class="relative mt-32 bg-cover bg-center bg-no-repeat text-white mt-8 py-32 px-6 md:px-12 shadow-2xl overflow-hidden"
+        id="hero"
+        style="background-image: url('assets/img/temp.jpg')">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-2xl">
+                Entrega Rápida, Segura e Profissional
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-100">
+                Especialistas em entregas rápidas e seguras com foco em motofrete.
+                Atendemos toda a Baixada Santista e Grande São Paulo, com suporte também de carros e caminhões baú para
+                volumes maiores.
+            </p>
+            <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
+                class="inline-block bg-white text-green-700 font-semibold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:bg-gray-200 transform hover:scale-105 transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-500">
+                Solicitar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="container mx-auto py-16 px-6">
+        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Nossos Serviços</h2>
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Serviço Motofrete -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+                id="servico1">
+                <div class="relative">
+                    <img src="assets/img/bau.jpeg" alt="Serviço de Motoboy"
+                        class="rounded-xl mb-6 h-48 w-full object-cover">
+                </div>
+                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Serviço de Motofrete
+                </h3>
+                <p class="text-gray-700 text-lg">Oferecemos transporte de encomendas rápidas e seguras. Temos uma frota
+                    de motos equipadas para qualquer tipo de entrega.</p>
+            </div>
+
+            <!-- Serviço Caminhão Baú -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+                id="servico2">
+                <img src="assets/img/caminhao.jpeg" alt="Entrega e Coletas (Caminhão Baú)"
+                    class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Entrega e Coletas (Caminhão Baú)
+                </h3>
+                <p class="text-gray-700 text-lg">Oferecemos veículos urbanos para entregas e coletas de cargas maiores,
+                    como fiorinos e caminhonetes. Ideais para pequenos e médios objetos, remessas delicadas e destinos
+                    maiores.</p>
+            </div>
+
+            <!-- Serviço Doblô -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+                id="servico3">
+                <img src="assets/img/doblo.jpg" alt="Entrega e Coletas (Carro Doblô)"
+                    class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Entrega e Coletas (Carro Doblô)
+                </h3>
+                <p class="text-gray-700 text-lg">Veículo ideal para entregas rápidas e coletas de pequenas cargas. O
+                    Doblô é perfeito para remessas pequenas e médias, garantindo eficiência e agilidade.</p>
+            </div>
+
+            <!-- Serviço Bancário (Oculto inicialmente) -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
+                id="servico4" style="display: none;">
+                <img src="assets/img/banco.jpg" alt="Serviços Bancários"
+                    class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Serviços Bancários
+                </h3>
+                <p class="text-gray-700 text-lg">Retiradas de valores, saques e transporte de dinheiro. Atuamos na
+                    Baixada Santista e Grande São Paulo, garantindo segurança e agilidade.</p>
+            </div>
+
+            <!-- Carga Extra (Oculto) -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
+                id="servico5" style="display: none;">
+                <img src="assets/img/img1.jpg" alt="Carga Extra" class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Carga Extra
+                </h3>
+                <p class="text-gray-700 text-lg">Possuímos motos com baú para transportar encomendas de maior volume e
+                    peso, garantindo segurança no transporte de cargas maiores.</p>
+            </div>
+
+            <!-- Serviços de Cartório (Oculto) -->
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
+                id="servico6" style="display: none;">
+                <img src="assets/img/cartorio.jpeg" alt="Serviços de Cartório"
+                    class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Serviços de Cartório
+                </h3>
+                <p class="text-gray-700 text-lg">Deslocamento de contratos, retirada de certidões, cópias autenticadas e
+                    reconhecimento de firmas. O melhor custo-benefício da região.</p>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="text-right mt-8">
+            <button id="verMaisBtn"
+                class="bg-green-600 text-white py-2 px-6 rounded-full shadow-md transition-all hover:bg-green-700 hover:ring-2 hover:ring-green-700">
+                Ver Mais
+            </button>
+            <button id="verMenosBtn"
+                class="bg-green-600 text-white py-2 px-6 rounded-full shadow-md transition-all hover:bg-green-700 hover:ring-2 hover:ring-green-700 hidden">
+                Ver Menos
+            </button>
+        </div>
+    </section>
+
+    <!-- Preços Section -->
+    <section id="precos" class="bg-green-600 py-16 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-10">Tabela de Preços</h2>
+
+            <!-- Tabela -->
+            <div class="overflow-x-auto rounded-md shadow-2xl max-w-4xl mx-auto bg-white">
+                <table class="min-w-full table-auto ">
+                    <thead>
+                        <tr class="bg-green-800 text-white">
+                            <th class="py-4 px-6 text-lg font-semibold text-center">Endereço</th>
+                            <th class="py-4 px-6 text-lg font-semibold text-center hseta"></th>
+                            <th class="py-4 px-6 text-lg font-semibold text-center">Destino</th>
+                            <th class="py-4 px-6 text-lg font-semibold text-center">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-lg text-gray-900">
+                        <!-- Linha 1 -->
+                        <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                            <td class="py-4 px-6 font-medium">Santos</td>
+                            <td class="py-4 px-6 text-center text-green-700 seta">
+                                <i class="fa fa-exchange-alt text-xl"></i>
+                            </td>
+                            <td class="py-4 px-6 font-medium">Santos</td>
+                            <td class="py-4 px-6 text-center">
+                                <div class="text-xl font-extrabold text-green-700 price"><span class="text-xs">A partir
+                                        de</span> R$ 20,00</div>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 2 -->
+                        <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                            <td class="py-4 px-6 font-medium">Santos</td>
+                            <td class="py-4 px-6 text-center text-green-700 seta">
+                                <i class="fa fa-exchange-alt text-xl"></i>
+                            </td>
+                            <td class="py-4 px-6 font-medium">São Vicente</td>
+                            <td class="py-4 px-6 text-center">
+                                <div class="text-xl font-extrabold text-green-700 price"><span class="text-xs">A partir
+                                        de</span> R$ 30,00</div>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 3 -->
+                        <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                            <td class="py-4 px-6 font-medium">Santos</td>
+                            <td class="py-4 px-6 text-center text-green-700 seta">
+                                <i class="fa fa-exchange-alt text-xl"></i>
+                            </td>
+                            <td class="py-4 px-6 font-medium">Guarujá</td>
+                            <td class="py-4 px-6 text-center">
+                                <div class="text-xl font-extrabold text-green-700 price"><span class="text-xs">A partir
+                                        de</span> R$ 60,00</div>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 4 -->
+                        <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                            <td class="py-4 px-6 font-medium">Santos</td>
+                            <td class="py-4 px-6 text-center text-green-700 seta">
+                                <i class="fa fa-exchange-alt text-xl"></i>
+                            </td>
+                            <td class="py-4 px-6 font-medium">Cubatão</td>
+                            <td class="py-4 px-6 text-center">
+                                <div class="text-xl font-extrabold text-green-700 price"><span class="text-xs">A partir
+                                        de</span> R$ 50,00</div>
+                            </td>
+                        </tr>
+
+                        <!-- Linha 5 -->
+                        <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
+                            <td class="py-4 px-6 font-medium">Santos</td>
+                            <td class="py-4 px-6 text-center text-green-700 seta">
+                                <i class="fa fa-exchange-alt text-xl"></i>
+                            </td>
+                            <td class="py-4 px-6 font-medium">São Paulo</td>
+                            <td class="py-4 px-6 text-center">
+                                <div class="text-xl font-extrabold text-green-700 price"><span class="text-xs">A partir
+                                        de</span> R$ 190,00</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-center text-sm mt-6 text-white">Consulte-nos para mais detalhes sobre preços e áreas
+                atendidas.</p>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="bg-gray-100 py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Galeria</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Card 1 -->
+                <div class="relative group">
+                    <img src="assets/img/pessoa.jpg" alt="Motoboy em Santos"
+                        class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <div class="text-center text-white px-4">
+                            <h3 class="text-xl font-semibold mb-4">Profissionais Qualificados</h3>
+                            <p class="text-lg">Nossos profissionais são qualificados e estão sempre em contato para
+                                informar os status de sua encomenda.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="relative group">
+                    <img src="assets/img/img1.jpg" alt="Motoboy Baixada Santista"
+                        class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <div class="text-center text-white px-4">
+                            <h3 class="text-xl font-semibold mb-4">Entrega Rápida</h3>
+                            <p class="text-lg">Entregas rápidas e seguras para atender a sua necessidade, sem
+                                complicação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="relative group">
+                    <img src="assets/img/doblo.jpg" alt="Moto Frete Baixada Santista"
+                        class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <div class="text-center text-white px-4">
+                            <h3 class="text-xl font-semibold mb-4">Frete Seguro</h3>
+                            <p class="text-lg">Garantimos que seu produto chegue no destino com segurança e agilidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="relative group">
+                    <img src="assets/img/img5.jpg" alt="Motoboy Rápido"
+                        class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <div class="text-center text-white px-4">
+                            <h3 class="text-xl font-semibold mb-4">Entrega no Prazo</h3>
+                            <p class="text-lg">Nosso compromisso é com o prazo. Sua encomenda chega sempre na hora
+                                certa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="relative group">
+                    <img src="assets/img/img6.jpg" alt="Motoboy Serviço Local"
+                        class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <div class="text-center text-white px-4">
+                            <h3 class="text-xl font-semibold mb-4">Serviço Local</h3>
+                            <p class="text-lg">Atendemos toda a Baixada Santista e Grande SP, com cobertura local e
+                                personalizada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="relative group">
+                    <img src="assets/img/moto.jpg" alt="Motoboy Confiável"
+                        class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
+                        <div class="text-center text-white px-4">
+                            <h3 class="text-xl font-semibold mb-4">Motoboys Confiáveis</h3>
+                            <p class="text-lg">Equipe treinada e comprometida com a segurança e satisfação do cliente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Depoimentos -->
+    <section class="bg-gray-50 py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Nossos Clientes</h2>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper h-72">
+                <div class="swiper-wrapper gap-2">
+                    <!-- Slide: Regina Duarte -->
+                    <div
+                        class="swiper-slide bg-white p-8 rounded-xl max-w-xl mx-auto min-h-[320px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-4 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg mb-6">"Sempre muito solicito, educado, e rápido. Super recomendo. Aqui em
+                                casa todos nós usamos o serviço. Espero que essa parceria dure muito tempo."</p>
+                        </div>
+                        <h4 class="font-semibold mt-auto">Regina Duarte</h4>
+                    </div>
+
+                    <!-- Slide: Fred Castro -->
+                    <div
+                        class="swiper-slide bg-white p-8 rounded-xl max-w-xl mx-auto min-h-[320px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-4 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg mb-6">"Profissional pontual e educado. Vai te informando as etapas do
+                                serviço em tempo real com foto se necessitar. Recomendo."</p>
+                        </div>
+                        <h4 class="font-semibold mt-auto">Fred Castro</h4>
+                    </div>
+
+                    <!-- Slide: Adriana Gomes -->
+                    <div
+                        class="swiper-slide bg-white p-8 rounded-xl max-w-xl mx-auto min-h-[320px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-4 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg mb-6">"O Walter é um profissional confiável, muito competente e
+                                responsável! Todas as suas entregas são rápidas! Recomendo! 👏"</p>
+                        </div>
+                        <h4 class="font-semibold mt-auto">Adriana Gomes</h4>
+                    </div>
+
+                    <!-- Slide: Mariana Santana -->
+                    <div
+                        class="swiper-slide bg-white p-8 rounded-xl max-w-xl mx-auto min-h-[320px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-4 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg mb-6">"Esse eu recomendo de olhos fechados. Responsabilidade, rapidez e
+                                eficiência. E o melhor de tudo: é sincero e não fica te enrolando."</p>
+                        </div>
+                        <h4 class="font-semibold mt-auto">Mariana Santana</h4>
+                    </div>
+
+                    <!-- Slide: Carlos David -->
+                    <div
+                        class="swiper-slide bg-white p-8 rounded-xl max-w-xl mx-auto min-h-[320px] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center mb-4 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg mb-6">"Ótimo serviço! Trouxe minha encomenda com agilidade e muito bem
+                                guardada."</p>
+                        </div>
+                        <h4 class="font-semibold mt-auto">Carlos David</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="container mx-auto py-12 px-6">
+        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Solicite Nossos Serviços</h2>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Mapa -->
+            <div class="w-full md:w-1/2 h-[400px] rounded-xl overflow-hidden shadow-md">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.202431080378!2d-46.33882712540587!3d-23.95328087610619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce036c2c5ba8a1%3A0x6dd90d173f42231f!2sR.%20Carvalho%20de%20Mendon%C3%A7a%2C%20386%20-%20Marap%C3%A9%2C%20Santos%20-%20SP%2C%2011070-101!5e0!3m2!1spt-BR!2sbr!4v1745606241687!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Formulário -->
+            <form id="whatsapp-form" class="w-full md:w-1/2 bg-white p-8 rounded-xl shadow-md space-y-6">
+                <input id="nome" type="text" placeholder="Nome" required
+                    class="w-full p-4 border border-gray-300 rounded-xl">
+                <input id="email" type="email" placeholder="Email" required
+                    class="w-full p-4 border border-gray-300 rounded-xl">
+                <input id="telefone" type="tel" placeholder="Telefone" required
+                    class="w-full p-4 border border-gray-300 rounded-xl">
+                <textarea id="mensagem" placeholder="Mensagem" required
+                    class="w-full p-4 border border-gray-300 rounded-xl"></textarea>
+                <button type="submit" class="btn-primary w-full">Enviar Solicitação</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Parceiros Section -->
+    <section class="bg-gray-50 py-8 px-6">
+        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Parceiros</h2>
+        <div class="container">
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-7 gap-2 items-center justify-items-center">
+                <!-- Exemplo de logo parceiro -->
+                <img src="assets/img/parceiros/carjetBlack.jpg" alt="Parceiro 1" class="h-16 object-contain">
+                <img src="assets/img/parceiros/hwBlack.png" alt="Parceiro 2" class="h-16 object-contain">
+                <img src="assets/img/parceiros/logongBlack.png" alt="Parceiro 3" class="h-16 object-contain">
+                <img src="assets/img/parceiros/msBlack.jpg" alt="Parceiro 4" class="h-16 object-contain">
+                <img src="assets/img/parceiros/tpBlack.jpg" alt="Parceiro 5" class="h-16 object-contain">
+                <img src="assets/img/parceiros/hdBlack.jpg" alt="Parceiro 6" class="h-16 object-contain">
+                <img src="assets/img/parceiros/tpBlack.jpg" alt="Parceiro 7" class="h-16 object-contain">
+                <!-- Adicione mais conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- Logo & descrição -->
+            <div>
+                <img src="assets/img/logofooter.jpg" alt="WM Express" class="h-16 mx-auto md:mx-0 mb-4">
+                <p class="text-gray-400 text-sm">Especialistas em entregas rápidas, seguras e profissionais. Atendemos
+                    toda a Baixada Santista e Grande SP.</p>
+            </div>
+
+            <!-- Links rápidos -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#servicos" class="hover:text-white transition">Serviços</a></li>
+                    <li><a href="#precos" class="hover:text-white transition">Preços</a></li>
+                    <li><a href="#galeria" class="hover:text-white transition">Galeria</a></li>
+                    <li><a href="#contato" class="hover:text-white transition">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Redes sociais -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Redes Sociais</h4>
+                <div class="flex justify-center md:justify-start space-x-4 text-gray-400">
+                    <a href="https://www.instagram.com/w.m.express/" class="hover:text-white transition"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/w.m.express/" class="hover:text-white transition"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
+                        class="hover:text-white transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+            <p>&copy; 2025 WM Express - Todos os direitos reservados.</p>
+            <p class="text-sm">CNPJ: 30.887.268/0001-58</p>
+            <p>
+                Desenvolvido por
+                <a href="https://vitormariano-hub.github.io/portfolio/" target="_blank"
+                    class="text-white font-semibold hover:underline">
+                    Vitor Mariano
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition"
+        target="_blank" aria-label="Fale no WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+</body>
+
+</html>
