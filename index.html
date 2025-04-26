@@ -5,81 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Serviço de motoboy rápido e seguro em toda a Baixada Santista e Grande São Paulo. Solicite agora mesmo!">
-    <meta name="keywords"
-        content="motoboy, entrega rápida, serviço de motoboy, entregas expressas, Baixada Santista, Grande São Paulo">
+        content="Serviço de motoboy rápido e seguro na Baixada Santista e Grande São Paulo. Entregas expressas com WM Express. Solicite agora!">
     <meta name="author" content="WM Express">
-    <title>Motoboy Rápido e Seguro | WM Express</title>
+    <title>Motoboy em Santos e Baixada Santista | Rápido e Seguro | WM Express</title>
     <link rel="icon" href="assets/img/logofooter.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload da imagem de fundo -->
+    <link rel="preload" href="assets/img/motoboySantosBaixadasantista.webp" as="image" type="image/webp"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body class="bg-gray-100 text-gray-800 scroll-smooth">
-    <!-- Header -->
+
     <header class="fixed top-0 left-0 w-full z-50 bg-gray-100">
         <div class="container mx-auto flex justify-between items-center py-6 px-8">
-            <!-- Logo -->
             <div class="flex items-center">
-                <img src="assets/img/logo.webp" alt="Logo" class="h-16">
+                <img src="assets/img/logo.webp" alt="WM Express - Motoboy e Entregas Rápidas" class="h-20">
             </div>
 
-            <!-- Desktop Navigation -->
-            <nav class="space-x-6 hidden md:flex">
+            <nav class="space-x-6 hidden md:flex" aria-label="Navegação principal">
                 <a href="#servicos" class="text-gray-800 hover:text-green-600 transition nav-link">Serviços</a>
                 <a href="#precos" class="text-gray-800 hover:text-green-600 transition nav-link">Preços</a>
                 <a href="#galeria" class="text-gray-800 hover:text-green-600 transition nav-link">Galeria</a>
                 <a href="#contato" class="text-gray-800 hover:text-green-600 transition nav-link">Contato</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
+            <div class="md:flex items-center space-x-4 hidden">
+                <!-- Adicionando o ícone de telefone e o número -->
+                <span class="text-gray-800 flex items-center">
+                    <i class="fas fa-phone-alt text-green-600 mr-2"></i>
+                    <a href="tel:+5513981146864" class="font-semibold text-green-600">13 98114-6864</a>
+                </span>
+                <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
+                    target="_blank" rel="noopener noreferrer"
+                    class="bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-green-700 transition">
+                    Solicite Agora
+                </a>
+            </div>
+
             <div class="md:hidden flex items-center">
                 <button id="hamburger" class="text-3xl text-gray-700 focus:outline-none">
                     &#9776;
                 </button>
             </div>
-
-            <!-- Call to Action Button -->
-            <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
-                class="bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-green-700 transition hidden md:block">
-                Solicite Agora
-            </a>
         </div>
-        <!-- Mobile Menu (oculto inicialmente) -->
+
         <div id="mobile-menu" class="hidden md:hidden p-4 space-y-4 absolute inset-0 bg-white z-50 shadow-lg">
             <div class="flex justify-between items-center mb-4">
-                <img src="assets/img/logo.png" alt="Logo" class="h-12">
+                <img src="assets/img/logo.webp" alt="WM Express - Motoboy e Entregas Rápidas" class="h-12">
                 <button id="close-menu" class="text-3xl text-black">
-                    &#10005; <!-- Botão de fechar -->
+                    &#10005;
                 </button>
             </div>
-            <!-- Área dos Links do Menu -->
+
             <div class="space-y-2 bg-gray-200 p-4 rounded-md text-gray-800">
                 <a href="#servicos"
                     class="block hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Serviços</a>
                 <a href="#precos"
-                    class="block  hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Preços</a>
+                    class="block hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Preços</a>
                 <a href="#galeria"
-                    class="block  hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Galeria</a>
+                    class="block hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Galeria</a>
                 <a href="#contato"
-                    class="block  hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Contato</a>
+                    class="block hover:text-white transition-all py-2 px-4 rounded-md hover:bg-green-600">Contato</a>
             </div>
-
         </div>
-
     </header>
 
     <!-- Hero -->
-    <section
-        class="relative mt-32 bg-cover bg-center bg-no-repeat text-white mt-8 py-32 px-6 md:px-12 shadow-2xl overflow-hidden"
+    <section class="relative mt-24 bg-cover bg-no-repeat text-white py-28 px-6 md:px-12 shadow-2xl overflow-hidden"
         id="hero"
-        style="background-image: url('assets/img/temp.webp')">
+        style="background-image: url('assets/img/motoboySantosBaixadasantista.webp'); background-position: center;">
         <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         <div class="relative z-10 max-w-4xl mx-auto text-center">
             <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-2xl">
@@ -102,77 +107,103 @@
         <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Nossos Serviços</h2>
         <div class="grid md:grid-cols-3 gap-12">
             <!-- Serviço Motofrete -->
-            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+            <div itemscope itemtype="https://schema.org/Service"
+                class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
                 id="servico1">
                 <div class="relative">
-                    <img src="assets/img/bau.webp" alt="Serviço de Motoboy"
+                    <img itemprop="image" src="assets/img/bau.webp" alt="Serviço de Motofrete em Santos" loading="lazy"
                         class="rounded-xl mb-6 h-48 w-full object-cover">
                 </div>
-                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
-                    Serviço de Motofrete
+                <h3 itemprop="name"
+                    class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Serviço de Motofrete em Santos e Região
                 </h3>
-                <p class="text-gray-700 text-lg">Oferecemos transporte de encomendas rápidas e seguras. Temos uma frota
-                    de motos equipadas para qualquer tipo de entrega.</p>
+                <p itemprop="description" class="text-gray-700 text-lg">
+                    Oferecemos motofrete ágil e seguro em Santos, São Vicente, Cubatão e São Paulo. Nossa frota de motos
+                    é equipada para o transporte de documentos, pequenas encomendas e objetos sensíveis. Garanta sua
+                    entrega rápida com motoboys experientes!
+                </p>
             </div>
 
             <!-- Serviço Caminhão Baú -->
-            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+            <div itemscope itemtype="https://schema.org/Service"
+                class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
                 id="servico2">
-                <img src="assets/img/caminhao.webp" alt="Entrega e Coletas (Caminhão Baú)"
-                    class="rounded-xl mb-6 h-48 w-full object-cover">
-                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
-                    Entrega e Coletas (Caminhão Baú)
+                <img itemprop="image" src="assets/img/caminhao.webp" alt="Entrega e Coletas (Caminhão Baú)"
+                    loading="lazy" class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 itemprop="name"
+                    class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Entregas e Coletas com Caminhão Baú em Santos e São Paulo
                 </h3>
-                <p class="text-gray-700 text-lg">Oferecemos veículos urbanos para entregas e coletas de cargas maiores,
-                    como fiorinos e caminhonetes. Ideais para pequenos e médios objetos, remessas delicadas e destinos
-                    maiores.</p>
+                <p itemprop="description" class="text-gray-700 text-lg">
+                    Realizamos entregas e coletas com caminhões baú, fiorinos e caminhonetes, ideais para cargas maiores
+                    ou remessas delicadas. Atuamos em Santos, região metropolitana e São Paulo, oferecendo transporte
+                    seguro e eficiente para empresas e clientes finais.
+                </p>
             </div>
 
             <!-- Serviço Doblô -->
-            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+            <div itemscope itemtype="https://schema.org/Service"
+                class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
                 id="servico3">
-                <img src="assets/img/doblo.webp" alt="Entrega e Coletas (Carro Doblô)"
+                <img itemprop="image" src="assets/img/doblo.webp" alt="Entrega e Coletas (Carro Doblô)" loading="lazy"
                     class="rounded-xl mb-6 h-48 w-full object-cover">
-                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
-                    Entrega e Coletas (Carro Doblô)
+                <h3 itemprop="name"
+                    class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Entrega Rápida com Carro Doblô na Baixada Santista
                 </h3>
-                <p class="text-gray-700 text-lg">Veículo ideal para entregas rápidas e coletas de pequenas cargas. O
-                    Doblô é perfeito para remessas pequenas e médias, garantindo eficiência e agilidade.</p>
+                <p itemprop="description" class="text-gray-700 text-lg">
+                    Ideal para coletas e entregas de pequenas e médias cargas. Nosso serviço com carro Doblô oferece
+                    agilidade e segurança para empresas e comércios de Santos, Praia Grande, São Vicente e São Paulo.
+                </p>
             </div>
 
             <!-- Serviço Bancário (Oculto inicialmente) -->
-            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
+            <div itemscope itemtype="https://schema.org/Service"
+                class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
                 id="servico4" style="display: none;">
-                <img src="assets/img/banco.webp" alt="Serviços Bancários"
+                <img itemprop="image" src="assets/img/banco.webp" alt="Serviços Bancários" loading="lazy"
                     class="rounded-xl mb-6 h-48 w-full object-cover">
-                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
-                    Serviços Bancários
+                <h3 itemprop="name"
+                    class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Serviços Bancários de Transporte Seguro
                 </h3>
-                <p class="text-gray-700 text-lg">Retiradas de valores, saques e transporte de dinheiro. Atuamos na
-                    Baixada Santista e Grande São Paulo, garantindo segurança e agilidade.</p>
+                <p itemprop="description" class="text-gray-700 text-lg">
+                    Realizamos transporte de valores, saques e serviços bancários com total segurança na Baixada
+                    Santista e em São Paulo. Nossa equipe é treinada para garantir discrição e agilidade.
+                </p>
             </div>
 
+
             <!-- Carga Extra (Oculto) -->
-            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
+            <div itemscope itemtype="https://schema.org/Service"
+                class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
                 id="servico5" style="display: none;">
-                <img src="assets/img/img1.webp" alt="Carga Extra" class="rounded-xl mb-6 h-48 w-full object-cover">
-                <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
-                    Carga Extra
+                <img itemprop="image" src="assets/img/img1.webp" alt="Carga Extra" loading="lazy"
+                    class="rounded-xl mb-6 h-48 w-full object-cover">
+                <h3 itemprop="name"
+                    class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
+                    Entrega de Carga Extra com Motoboy Especializado
                 </h3>
-                <p class="text-gray-700 text-lg">Possuímos motos com baú para transportar encomendas de maior volume e
-                    peso, garantindo segurança no transporte de cargas maiores.</p>
+                <p itemprop="description" class="text-gray-700 text-lg">
+                    Transporte de encomendas volumosas ou pesadas com motos equipadas com baú especial. Atendemos
+                    Santos, Guarujá e toda a Grande São Paulo com segurança e rapidez.
+                </p>
             </div>
 
             <!-- Serviços de Cartório (Oculto) -->
-            <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
+            <div itemscope itemtype="https://schema.org/Service"
+                class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all transform hover:scale-105 servico-oculto"
                 id="servico6" style="display: none;">
-                <img src="assets/img/cartorio.webp" alt="Serviços de Cartório"
+                <img itemprop="image" src="assets/img/cartorio.webp" alt="Serviços de Cartório" loading="lazy"
                     class="rounded-xl mb-6 h-48 w-full object-cover">
                 <h3 class="text-2xl font-extrabold text-green-900 mb-4 border-b-2 border-green-600 inline-block">
-                    Serviços de Cartório
+                    Serviços de Cartório e Despachante em Santos
                 </h3>
-                <p class="text-gray-700 text-lg">Deslocamento de contratos, retirada de certidões, cópias autenticadas e
-                    reconhecimento de firmas. O melhor custo-benefício da região.</p>
+                <p itemprop="description" class="text-gray-700 text-lg">Fazemos retirada e entrega de certidões,
+                    reconhecimento de firmas,
+                    cópias autenticadas e documentos em cartórios de Santos e região. Serviço rápido e econômico para
+                    sua empresa ou para uso pessoal.</p>
             </div>
         </div>
 
@@ -192,17 +223,18 @@
     <!-- Preços Section -->
     <section id="precos" class="bg-green-600 py-16 px-6">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-white mb-10">Tabela de Preços</h2>
+            <h2 class="text-4xl font-bold text-white mb-10">Tabela de Preços - Entregas na Baixada Santista e São Paulo
+            </h2>
 
             <!-- Tabela -->
             <div class="overflow-x-auto rounded-md shadow-2xl max-w-4xl mx-auto bg-white">
-                <table class="min-w-full table-auto ">
+                <table class="min-w-full table-auto">
                     <thead>
                         <tr class="bg-green-800 text-white">
-                            <th class="py-4 px-6 text-lg font-semibold text-center">Endereço</th>
+                            <th class="py-4 px-6 text-lg font-semibold text-center" scope="col">Endereço</th>
                             <th class="py-4 px-6 text-lg font-semibold text-center hseta"></th>
-                            <th class="py-4 px-6 text-lg font-semibold text-center">Destino</th>
-                            <th class="py-4 px-6 text-lg font-semibold text-center">Preço</th>
+                            <th class="py-4 px-6 text-lg font-semibold text-center" scope="col">Destino</th>
+                            <th class="py-4 px-6 text-lg font-semibold text-center" scope="col">Preço</th>
                         </tr>
                     </thead>
                     <tbody class="text-lg text-gray-900">
@@ -210,7 +242,7 @@
                         <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
                             <td class="py-4 px-6 font-medium">Santos</td>
                             <td class="py-4 px-6 text-center text-green-700 seta">
-                                <i class="fa fa-exchange-alt text-xl"></i>
+                                <i class="fa fa-exchange-alt text-xl" aria-hidden="true"></i>
                             </td>
                             <td class="py-4 px-6 font-medium">Santos</td>
                             <td class="py-4 px-6 text-center">
@@ -223,7 +255,7 @@
                         <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
                             <td class="py-4 px-6 font-medium">Santos</td>
                             <td class="py-4 px-6 text-center text-green-700 seta">
-                                <i class="fa fa-exchange-alt text-xl"></i>
+                                <i class="fa fa-exchange-alt text-xl" aria-hidden="true"></i>
                             </td>
                             <td class="py-4 px-6 font-medium">São Vicente</td>
                             <td class="py-4 px-6 text-center">
@@ -236,7 +268,7 @@
                         <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
                             <td class="py-4 px-6 font-medium">Santos</td>
                             <td class="py-4 px-6 text-center text-green-700 seta">
-                                <i class="fa fa-exchange-alt text-xl"></i>
+                                <i class="fa fa-exchange-alt text-xl" aria-hidden="true"></i>
                             </td>
                             <td class="py-4 px-6 font-medium">Guarujá</td>
                             <td class="py-4 px-6 text-center">
@@ -249,7 +281,7 @@
                         <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
                             <td class="py-4 px-6 font-medium">Santos</td>
                             <td class="py-4 px-6 text-center text-green-700 seta">
-                                <i class="fa fa-exchange-alt text-xl"></i>
+                                <i class="fa fa-exchange-alt text-xl" aria-hidden="true"></i>
                             </td>
                             <td class="py-4 px-6 font-medium">Cubatão</td>
                             <td class="py-4 px-6 text-center">
@@ -262,7 +294,7 @@
                         <tr class="border-b border-gray-200 hover:bg-green-50 transition-colors">
                             <td class="py-4 px-6 font-medium">Santos</td>
                             <td class="py-4 px-6 text-center text-green-700 seta">
-                                <i class="fa fa-exchange-alt text-xl"></i>
+                                <i class="fa fa-exchange-alt text-xl" aria-hidden="true"></i>
                             </td>
                             <td class="py-4 px-6 font-medium">São Paulo</td>
                             <td class="py-4 px-6 text-center">
@@ -277,6 +309,24 @@
             <p class="text-center text-sm mt-6 text-white">Consulte-nos para mais detalhes sobre preços e áreas
                 atendidas.</p>
         </div>
+
+        <!-- JSON-LD Schema for Local SEO -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Entrega via motoboy, caminhão baú e carro utilitário",
+            "provider": {
+                "@type": "Organization",
+                "name": "Nome da Sua Empresa",
+                "areaServed": {
+                    "@type": "Place",
+                    "name": "Santos, São Vicente, Guarujá, Cubatão, São Paulo"
+                },
+                "priceRange": "R$ 20,00 a R$ 190,00"
+            }
+        }
+        </script>
     </section>
 
     <!-- Galeria Section -->
@@ -286,89 +336,119 @@
             <div class="grid md:grid-cols-3 gap-12">
                 <!-- Card 1 -->
                 <div class="relative group">
-                    <img src="assets/img/pessoa.webp" alt="Motoboy em Santos"
+                    <img src="assets/img/pessoa.webp" alt="Motoboy realizando entrega em Santos com uniforme verde"
+                        loading="lazy"
                         class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
                         <div class="text-center text-white px-4">
-                            <h3 class="text-xl font-semibold mb-4">Profissionais Qualificados</h3>
-                            <p class="text-lg">Nossos profissionais são qualificados e estão sempre em contato para
-                                informar os status de sua encomenda.</p>
+                            <h3 class="text-xl font-semibold mb-4">Motoboys Qualificados para Entregas Rápidas e Seguras
+                                na Baixada Santista</h3>
+                            <p class="text-lg">Contamos com motoboys altamente qualificados, prontos para realizar
+                                entregas rápidas e seguras em Santos, São Vicente, Guarujá, Cubatão e Praia Grande. Com
+                                comunicação constante e acompanhamento em tempo real, garantimos que sua encomenda
+                                chegue no prazo e em perfeitas condições.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="relative group">
-                    <img src="assets/img/img1.webp" alt="Motoboy Baixada Santista"
+                    <img src="assets/img/img1.webp" alt="Motoboy realizando entrega na Baixada Santista com moto"
+                        loading="lazy"
                         class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
                         <div class="text-center text-white px-4">
-                            <h3 class="text-xl font-semibold mb-4">Entrega Rápida</h3>
-                            <p class="text-lg">Entregas rápidas e seguras para atender a sua necessidade, sem
-                                complicação.</p>
+                            <h3 class="text-xl font-semibold mb-4">Entrega Rápida e Segura em Santos e Região</h3>
+                            <p class="text-lg">Oferecemos entregas rápidas e seguras em Santos, São Vicente, Guarujá,
+                                Cubatão, Praia Grande e demais cidades da Baixada Santista. Atendemos sua necessidade
+                                com agilidade e sem complicação, garantindo que sua encomenda chegue no prazo certo e
+                                com total segurança.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="relative group">
-                    <img src="assets/img/doblo.webp" alt="Moto Frete Baixada Santista"
+                    <img src="assets/img/doblo.webp" alt="Caminhão Baú realizando entrega na Baixada Santista"
+                        loading="lazy"
                         class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
                         <div class="text-center text-white px-4">
-                            <h3 class="text-xl font-semibold mb-4">Frete Seguro</h3>
-                            <p class="text-lg">Garantimos que seu produto chegue no destino com segurança e agilidade.
-                            </p>
+                            <h3 class="text-xl font-semibold mb-4">Frete Seguro na Baixada Santista</h3>
+                            <p class="text-lg">Oferecemos transporte ágil e seguro para Santos, São Vicente, Guarujá,
+                                Cubatão, Praia Grande e toda a região. Seu produto chega ao destino com total confiança
+                                e no prazo prometido.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="relative group">
-                    <img src="assets/img/img5.webp" alt="Motoboy Rápido"
+                    <img src="assets/img/img5.webp" alt="Motoboy realizando entrega rápida com moto" loading="lazy"
                         class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
                         <div class="text-center text-white px-4">
-                            <h3 class="text-xl font-semibold mb-4">Entrega no Prazo</h3>
-                            <p class="text-lg">Nosso compromisso é com o prazo. Sua encomenda chega sempre na hora
-                                certa.</p>
+                            <h3 class="text-xl font-semibold mb-4">Entrega Pontual na Baixada Santista</h3>
+                            <p class="text-lg">Garantimos que sua encomenda chegue sempre no prazo, com agilidade, em
+                                Santos, São Vicente, Guarujá, Cubatão, Praia Grande e outras localidades da região.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="relative group">
-                    <img src="assets/img/img6.webp" alt="Motoboy Serviço Local"
+                    <img src="assets/img/img6.webp" alt="Motoboy realizando serviço local na Baixada Santista"
+                        loading="lazy"
                         class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
                         <div class="text-center text-white px-4">
-                            <h3 class="text-xl font-semibold mb-4">Serviço Local</h3>
-                            <p class="text-lg">Atendemos toda a Baixada Santista e Grande SP, com cobertura local e
-                                personalizada.</p>
+                            <h3 class="text-xl font-semibold mb-4">Serviço de Entregas na Baixada Santista e Grande São
+                                Paulo</h3>
+                            <p class="text-lg">Oferecemos soluções de entrega rápidas e seguras em toda a Baixada
+                                Santista e Grande São Paulo, com cobertura personalizada para cada necessidade.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="relative group">
-                    <img src="assets/img/moto.webp" alt="Motoboy Confiável"
+                    <img src="assets/img/moto.webp" alt="Motoboy confiável fazendo entrega segura" loading="lazy"
                         class="rounded-xl shadow-lg w-full h-72 object-cover transform transition duration-300 group-hover:scale-105 group-hover:opacity-60">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
                         <div class="text-center text-white px-4">
-                            <h3 class="text-xl font-semibold mb-4">Motoboys Confiáveis</h3>
-                            <p class="text-lg">Equipe treinada e comprometida com a segurança e satisfação do cliente.
-                            </p>
+                            <h3 class="text-xl font-semibold mb-4">Motoboys Confiáveis na Baixada Santista</h3>
+                            <p class="text-lg">Nossa equipe de motoboys é altamente treinada e dedicada a garantir a
+                                segurança das suas entregas, sempre com foco na satisfação do cliente em toda a Baixada
+                                Santista e região.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- JSON-LD Schema for SEO -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ImageGallery",
+                "name": "Galeria de Imagens de Entrega e Motoboys",
+                "url": "https://www.seusite.com/galeria",
+                "image": [
+                    "https://www.seusite.com/assets/img/pessoa.webp",
+                    "https://www.seusite.com/assets/img/img1.webp",
+                    "https://www.seusite.com/assets/img/doblo.webp",
+                    "https://www.seusite.com/assets/img/img5.webp",
+                    "https://www.seusite.com/assets/img/img6.webp",
+                    "https://www.seusite.com/assets/img/moto.webp"
+                ]
+            }
+        </script>
     </section>
 
     <!-- Contato Depoimentos -->
@@ -454,8 +534,8 @@
     </section>
 
     <!-- Contato Section -->
-    <section id="contato" class="container mx-auto py-12 px-6">
-        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Solicite Nossos Serviços</h2>
+    <section id="contato" class="container mx-auto py-16 px-6">
+        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Solicite Entrega Rápida ou Motoboy</h2>
 
         <div class="flex flex-col md:flex-row gap-8">
             <!-- Mapa -->
@@ -463,7 +543,8 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.202431080378!2d-46.33882712540587!3d-23.95328087610619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce036c2c5ba8a1%3A0x6dd90d173f42231f!2sR.%20Carvalho%20de%20Mendon%C3%A7a%2C%20386%20-%20Marap%C3%A9%2C%20Santos%20-%20SP%2C%2011070-101!5e0!3m2!1spt-BR!2sbr!4v1745606241687!5m2!1spt-BR!2sbr"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Localização de nossa sede, Santos, SP"></iframe>
             </div>
 
             <!-- Formulário -->
@@ -479,32 +560,111 @@
                 <button type="submit" class="btn-primary w-full">Enviar Solicitação</button>
             </form>
         </div>
+
+        <!-- Links de contato rápidos -->
+        <div class="mt-20 text-center">
+            <p class="text-lg mb-8 text-gray-800">Ou entre em contato pelo WhatsApp diretamente:</p>
+            <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
+                target="_blank" rel="noopener noreferrer"
+                class="bg-green-600 mt-10 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-green-700 transition">
+                Falar no WhatsApp
+            </a>
+        </div>
     </section>
 
     <!-- Parceiros Section -->
     <section class="bg-gray-50 py-8 px-6">
-        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Parceiros</h2>
+        <h2 class="text-4xl font-bold text-center text-green-800 mb-10">Empresas que Confiam em Nós</h2>
         <div class="container">
-            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-7 gap-2 items-center justify-items-center">
+            <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-7 gap-2 items-center justify-items-center">
                 <!-- Exemplo de logo parceiro -->
-                <img src="assets/img/parceiros/carjetBlack.webp" alt="Parceiro 1" class="h-16 object-contain">
-                <img src="assets/img/parceiros/hwBlack.webp" alt="Parceiro 2" class="h-16 object-contain">
-                <img src="assets/img/parceiros/logongBlack.webp" alt="Parceiro 3" class="h-16 object-contain">
-                <img src="assets/img/parceiros/msBlack.webp" alt="Parceiro 4" class="h-16 object-contain">
-                <img src="assets/img/parceiros/tpBlack.webp" alt="Parceiro 5" class="h-16 object-contain">
-                <img src="assets/img/parceiros/hdBlack.webp" alt="Parceiro 6" class="h-16 object-contain">
-                <img src="assets/img/parceiros/tpBlack.webp" alt="Parceiro 7" class="h-16 object-contain">
-                <!-- Adicione mais conforme necessário -->
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/carjetBlack.webp"
+                        alt="Logo da Carjet - Parceiro de Transporte Rápido" class="h-16 object-contain" loading="lazy">
+                </article>
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/hwBlack.webp" alt="Logo da HW - Parceiro de Entregas de Veículos"
+                        class="h-16 object-contain" loading="lazy">
+                </article>
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/logongBlack.webp" alt="Logo da Logong - Parceiro em Logística Rápida"
+                        class="h-16 object-contain" loading="lazy">
+                </article>
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/msBlack.webp" alt="Logo da MS - Parceiro em Logística de Transporte"
+                        class="h-16 object-contain" loading="lazy">
+                </article>
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/tpBlack.webp" alt="Logo da TP - Parceiro de Entregas Express"
+                        class="h-16 object-contain" loading="lazy">
+                </article>
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/hdBlack.webp"
+                        alt="Logo da HD - Parceiro em Transporte de Mercadorias" class="h-16 object-contain"
+                        loading="lazy">
+                </article>
+                <article class="partner-logo">
+                    <img src="assets/img/parceiros/tpBlack.webp" alt="Logo da TP - Parceiro de Entregas Rápidas"
+                        class="h-16 object-contain" loading="lazy">
+                </article>
             </div>
         </div>
     </section>
+
+    <!-- Dados Estruturados para SEO -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WM Express",
+    "url": "https://www.wmexpress.com.br",
+    "logo": "https://www.wmexpress.com.br/assets/img/logo.webp",
+    "sameAs": [
+        "https://www.facebook.com/wmexpress",
+        "https://twitter.com/wmexpress"
+    ],
+    "partner": [
+        {
+        "@type": "Organization",
+        "name": "Carjet",
+        "logo": "https://www.wmexpress.com.br/assets/img/parceiros/carjetBlack.webp"
+        },
+        {
+        "@type": "Organization",
+        "name": "HW",
+        "logo": "https://www.wmexpress.com.br/assets/img/parceiros/hwBlack.webp"
+        },
+        {
+        "@type": "Organization",
+        "name": "Logong",
+        "logo": "https://www.wmexpress.com.br/assets/img/parceiros/logongBlack.webp"
+        },
+        {
+        "@type": "Organization",
+        "name": "MS",
+        "logo": "https://www.wmexpress.com.br/assets/img/parceiros/msBlack.webp"
+        },
+        {
+        "@type": "Organization",
+        "name": "TP",
+        "logo": "https://www.wmexpress.com.br/assets/img/parceiros/tpBlack.webp"
+        },
+        {
+        "@type": "Organization",
+        "name": "HD",
+        "logo": "https://www.wmexpress.com.br/assets/img/parceiros/hdBlack.webp"
+        }
+    ]
+    }
+    </script>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-10">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             <!-- Logo & descrição -->
             <div>
-                <img src="assets/img/logofooter.webp" alt="WM Express" class="h-16 mx-auto md:mx-0 mb-4">
+                <img src="assets/img/logofooter.webp" alt="WM Express - Especialistas em entregas rápidas e seguras"
+                    class="h-16 mx-auto md:mx-0 mb-4" loading="lazy">
                 <p class="text-gray-400 text-sm">Especialistas em entregas rápidas, seguras e profissionais. Atendemos
                     toda a Baixada Santista e Grande SP.</p>
             </div>
@@ -513,10 +673,14 @@
             <div>
                 <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="#servicos" class="hover:text-white transition">Serviços</a></li>
-                    <li><a href="#precos" class="hover:text-white transition">Preços</a></li>
-                    <li><a href="#galeria" class="hover:text-white transition">Galeria</a></li>
-                    <li><a href="#contato" class="hover:text-white transition">Contato</a></li>
+                    <li><a href="#servicos" class="hover:text-white transition"
+                            title="Saiba mais sobre os serviços oferecidos">Serviços</a></li>
+                    <li><a href="#precos" class="hover:text-white transition"
+                            title="Confira os preços dos nossos serviços">Preços</a></li>
+                    <li><a href="#galeria" class="hover:text-white transition"
+                            title="Veja nossa galeria de imagens">Galeria</a></li>
+                    <li><a href="#contato" class="hover:text-white transition"
+                            title="Entre em contato conosco">Contato</a></li>
                 </ul>
             </div>
 
@@ -525,11 +689,17 @@
                 <h4 class="text-lg font-semibold mb-4">Redes Sociais</h4>
                 <div class="flex justify-center md:justify-start space-x-4 text-gray-400">
                     <a href="https://www.instagram.com/w.m.express/" class="hover:text-white transition"
-                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        aria-label="Facebook" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
                     <a href="https://www.instagram.com/w.m.express/" class="hover:text-white transition"
-                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        aria-label="Instagram" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                     <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
-                        class="hover:text-white transition" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        class="hover:text-white transition" aria-label="WhatsApp" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -540,7 +710,7 @@
             <p>
                 Desenvolvido por
                 <a href="https://vitormariano-hub.github.io/portfolio/" target="_blank"
-                    class="text-white font-semibold hover:underline">
+                    class="text-white font-semibold hover:underline" rel="noopener noreferrer">
                     Vitor Mariano
                 </a>
             </p>
@@ -548,8 +718,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 
     <!-- Botão WhatsApp Flutuante -->
     <a href="https://api.whatsapp.com/send/?phone=5513981146864&text&type=phone_number&app_absent=0"
